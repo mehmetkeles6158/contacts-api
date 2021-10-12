@@ -1,0 +1,9 @@
+GET http://localhost:3000//first_contact.json
+
+###
+
+GET http://localhost:3000//contacts.json
+
+### 
+
+GET http://localhost:3000//fake_contacts.json
