@@ -1,9 +1,24 @@
-GET http://localhost:3000//first_contact.json
+GET http://localhost:3000/contacts
 
 ###
 
-GET http://localhost:3000//contacts.json
+GET http://localhost:3000/contacts/1
 
 ### 
 
-GET http://localhost:3000//fake_contacts.json
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+  "input_first_name" : "Ali" ,
+  "input_last_name" : "Walker" ,
+  "input_email" : "walker@gmail.com",
+  "input_phone_number" : "444-999-8888",
+  "input_latitude" : 48.856614,
+  "input_longitude" : 2.3522219
+}
+
+
+
+
+
