@@ -1,14 +1,14 @@
 class ContactsController < ApplicationController
   def index
     contacts = Contact.all
-    render json: contacts.as_json
+    render json: contacts
   end
 
   def show
 
     the_id = params[:id]
     contact = Contact.find_by(id:the_id)
-    render json:contact.as_json
+    render json:contact
 
   end
 
@@ -16,7 +16,7 @@ class ContactsController < ApplicationController
     results = Geocoder.search(params[:address])
     geo_latitude = results.first.coordinates[0]
     geo_longitude = results.first.coordinates[1]
-    
+
     contact = Contact.new(
     first_name: params[:first_name],
     last_name: params[:last_name],
@@ -26,7 +26,7 @@ class ContactsController < ApplicationController
     phone_number: params[:phone_number]
     )
     contact.save
-    render json:contact.as_json
+    render json:contact
   end
 
   # def update
