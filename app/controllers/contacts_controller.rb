@@ -25,8 +25,11 @@ class ContactsController < ApplicationController
     email: params[:email],
     phone_number: params[:phone_number]
     )
-    contact.save
-    render json:contact
+    if contact.save
+      render json:contact
+    else 
+      render json: {errors: contact.errors.full_messages}
+    end
   end
 
   # def update

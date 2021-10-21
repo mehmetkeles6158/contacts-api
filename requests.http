@@ -10,7 +10,7 @@ POST http://localhost:3000/contacts
 Content-Type: application/json
 
 {
-  "first_name" : "Kyle" ,
+  "first_name" : "K" ,
   "last_name" : "Walker" ,
   "address" : "601 Lakeside Ave E, Cleveland, OH 44114",
   "email" : "walker@gmail.com",

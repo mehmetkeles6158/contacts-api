@@ -1,5 +1,7 @@
 class Contact < ApplicationRecord
 
+  validates :first_name, length: { minimum: 2 }
+
   def is_cool_name?
 
     if first_name.length > 5
